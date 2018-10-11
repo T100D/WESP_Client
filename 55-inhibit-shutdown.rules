@@ -1,0 +1,15 @@
+polkit.addRule(function(action, subject) {
+    if (action.id.indexOf("org.freedesktop.login1.power-off") == 0 ||
+        action.id.indexOf("org.freedesktop.login1.reboot") == 1) {
+        try {
+            // user-may-reboot exits with success (exit code 0)
+            // only if the passed username is authorized
+            polkit.spawn(["/usr/local/bin/user-may-reboot",
+                          subject.user]);
+            return polkit.Result.YES;
+        } catch (error) {
+            // Nope, but do allow admin authentication
+            return polkit.Result.AUTH_ADMIN;
+        }
+    }
+});
