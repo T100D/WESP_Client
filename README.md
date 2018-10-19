@@ -1,7 +1,7 @@
 
 ### Project Virtualisatie Wesp Clients
 
-  - System & Application (Java) migration from physical SLES 11 to virtual Centos 7
+  - System & Application (Java) migration from physical SLES 11/KDE to virtual Centos 7/Gnome
   - Integration in VDI enviroment
 
 
