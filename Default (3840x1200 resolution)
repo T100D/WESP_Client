@@ -91,8 +91,8 @@ if [ "x$SETXKBMAP" != "x" ] ; then
   fi
 fi
 
-/usr/bin/x11vnc -nap -bg -many -repeat -clear_keys -rfbport 5900
-/usr/bin/x11vnc -nap -bg -many -repeat -clear_keys -clip 1920x1200+0+0 -display :0 -rfbport 5901
-/usr/bin/x11vnc -nap -bg -many -repeat -clear_keys -clip 1920x1200+1920+0 -display :0 -rfbport 5902
+/usr/bin/x11vnc -bg -forever -shared -clear_all -display :0 -rfbport 5900
+/usr/bin/x11vnc -bg -forever -shared -clear_keys -clip 1920x1200+0+0 -display :0 -rfbport 5901
+/usr/bin/x11vnc -bg -forever -shared -clear_keys -clip 1920x1200+1920+0 -display :0 -rfbport 5902
 exit 0
 '''
