@@ -8,6 +8,5 @@
 ### The Files listed
  - Default - The file located in: /etc/gdm/Init/
  - Monitors.xml - The file located in: /home/wesp/.config/
- - fstab - The extra line in /etc/fstab
  - 55-inhibit-shutdown.rules - The file is located in: /etc/polkit-1/rules.d
  - gtl.css - The file is put in: /home/<user>/.config/gtk-3.0/
