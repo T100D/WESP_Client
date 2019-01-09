@@ -1,1 +1,0 @@
-//10.64.72.15/SAN01 /mnt/san cifs user=*********,pass=*********,noserverino,nounix,ro,sec=ntlm 0 0
