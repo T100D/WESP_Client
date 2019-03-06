@@ -86,5 +86,5 @@ if [ "x$SETXKBMAP" != "x" ] ; then
   fi
 fi
 
-/usr/bin/x11vnc -bg -forever -shared -clear_all -nonap -nowf -noxinerama -display :0 -rfbport 5900
+/usr/bin/x11vnc -bg -forever -shared -clear_keys -nonap -nowf -noxinerama -display :0 -rfbport 5900
 exit 0
