@@ -7,6 +7,9 @@
 PATH="/usr/bin:$PATH"
 OLD_IFS=$IFS
 
+# Add xrandr for correct display mode
+# Arie van den Heuvel
+
 xrandr --newmode "3840x1200_60.00"  386.31  3840 4096 4512 5184  1200 1201 1204 1242  -HSync +Vsync
 xrandr --addmode Virtual1 3840x1200_60.00
 xrandr --output Virtual1 --mode 3840x1200_60.00
