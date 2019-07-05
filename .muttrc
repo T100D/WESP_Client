@@ -1,0 +1,6 @@
+    # About Me
+    # place this file in /home/wesp/
+    # Correct from and realname
+    #
+    set from = "noreply-hostname@(secret).net"
+    set realname = "Clinet Name"
