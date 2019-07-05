@@ -10,3 +10,5 @@
  - Monitors.xml - The file located in: /home/wesp/.config/
  - 55-inhibit-shutdown.rules - The file is located in: /etc/polkit-1/rules.d
  - gtk.css - The file is put in: /home/<user>/.config/gtk-3.0/
+ - .muttrc - Mutt user config file is put in: /home/wesp/
+ - mailwatch.sh - Mail checking and sensing script is put in: /home/wesp/.bin/
