@@ -1,4 +1,4 @@
-## Configuration Centos7 client setup
+## Configuration Centos7 client setup for WESP
 
 ### Remove software
 ```
