@@ -6,7 +6,7 @@
 
 
 ### The Files listed
- - clientsetup.md - Centos/Cient configurations
+ - clientsetup.md - Centos/Client configurations
  - Default - The file located in: /etc/gdm/Init/
  - Monitors.xml - The file located in: /home/wesp/.config/
  - 55-inhibit-shutdown.rules - The file is located in: /etc/polkit-1/rules.d
