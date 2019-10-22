@@ -117,7 +117,7 @@ configure ntp servers in /etc/ntp.conf
   - Make it mount at boot time:
 ``` 
     # chmod +x /etc/rc.d/rc.local  
-    # echo "sleep 10; mount /mnt/san" >> /etc/rc.local  
+    # echo "sleep 15; mount /mnt/san" >> /etc/rc.local  
 ```
 
 ### Add program directory & copy software   
