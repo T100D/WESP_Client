@@ -264,3 +264,16 @@ dconf load /org/gnome/ < backup.txt
 ```
 echo "export JAVA_HOME=/usr/local/wesp/wesp3/java/jre/bin/java" >> /home/wesp/.bash_profile
 ```
+### Add jolokia agent when needed
+
+The agent can be downloaded here: https://jolokia.org/download.html
+The current agent is:  	jolokia-jvm-1.6.2-agent.jar
+
+create a folder /usr/local/wesp/wesp3/jolokia and put the agent in this directory
+
+Add the following to the start command in: /usr/local/wesp/wesp3/wesp_client/start/StartWespPROD.sh
+```
+-javaagent:/usr/local/wesp/wesp3/jolokia/jolokia-jvm-1.6.2-agent.jar=port=8080
+```
+
+
