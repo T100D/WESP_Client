@@ -161,6 +161,7 @@ configure ntp servers in /etc/ntp.conf
  # gsettings set org.gnome.desktop.lockdown disable-lock-screen true
  # gsettings set org.gnome.desktop.sound event-sounds false
  # gsettings set org.gnome.desktop.input-sources xkb-options ['numpad:microsoft', 'caps:shiftlock']
+ # gsettings set org.gnome.desktop.session idle-delay 0
 ```
 
 ### Modify logon session list
