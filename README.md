@@ -13,3 +13,4 @@
  - gtk.css - The file is put in: /home/<user>/.config/gtk-3.0/
  - .muttrc - Mutt user config file is put in: /home/wesp/
  - mailwatch.sh - Mail checking and sensing script is put in: /home/wesp/.bin/
+ - startwespweb - script to start two interdependent chromium windows and put is on the richt position on the screen
