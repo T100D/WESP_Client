@@ -6,7 +6,7 @@
 ```
 ### Install software
 ```
-# yum install -y alacarte htop nmon mc dconf-editor lftp xinetd
+# yum install -y alacarte htop nmon mc dconf-editor lftp xinetd wmctrl
 # yum localinstall -y check_mk agent
 ```
 
