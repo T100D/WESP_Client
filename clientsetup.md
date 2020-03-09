@@ -2,7 +2,7 @@
 
 ### Remove software
 ```
-# yum remove -y vinagre empathy cheese totem gnome-boxes gnome-software gnome-disk-utility icedtea-web orca tigervnc-server-minimal firewall-config setroubleshoot-server gnome-packagekit
+# yum remove -y vinagre empathy cheese totem gnome-boxes gnome-software gnome-disk-utility icedtea-web orca tigervnc-server-minimal firewall-config setroubleshoot-server gnome-packagekit spice-vdagent spice-server spice-glib spice-gtk3
 ```
 ### Install software
 ```
@@ -254,11 +254,6 @@ dconf dump /org/gnome/ > backup-gnome.txt
 **Restore**
 ```
 dconf load /org/gnome/ < backup.txt
-```
-
-### Alterations due to system en resource problems
-```
-#  yum remove -y spice-vdagent spice-server spice-glib spice-gtk3
 ```
 
 ### Add JAVA_HOME for the wesp user
