@@ -163,6 +163,7 @@ configure ntp servers in /etc/ntp.conf
  # gsettings set org.gnome.desktop.input-sources xkb-options ['numpad:microsoft', 'caps:shiftlock']
  # gsettings set org.gnome.desktop.session idle-delay 0
  later additions
+ # gsettings set org.gnome.settings-daemon.plugins.color night-light-enabled false
  # gsettings set org.gnome.settings-daemon.plugins.power idle-dim false
  # gsettings set org.gnome.settings-daemon.plugins.power ambient-enabled false
 ```
