@@ -6,21 +6,21 @@
 ```
 ### Install software
 ```
-# yum install -y alacarte htop nmon mc dconf-editor lftp xinetd wmctrl
-# yum localinstall -y check_mk agent
+yum install -y alacarte htop nmon mc dconf-editor lftp xinetd wmctrl
+yum localinstall -y check_mk agent
 ```
 
 ### Install software for acrobat/pdf 32bit dependencies
 ```
-# yum install -y gtk-murrine-engine.x86_64 libmount.i686 libmount.x86_64 msttcorefonts
-# yum install libpk-gtk-module.so (incl. dependancies, removes lib-gtk-error)
-# yum install libcanberra-gtk-module.so (incl. dependancies,removes lib-gtk-error)
-# yum install adwaita-gtk2-theme-3.28-2.el7.i686 (removes 'Unable to locate theme engine in module_path: "adwaita"' Error)
+yum install -y gtk-murrine-engine.x86_64 libmount.i686 libmount.x86_64 msttcorefonts
+yum install libpk-gtk-module.so (incl. dependancies, removes lib-gtk-error)
+yum install libcanberra-gtk-module.so (incl. dependancies,removes lib-gtk-error)
+yum install adwaita-gtk2-theme-3.28-2.el7.i686 (removes 'Unable to locate theme engine in module_path: "adwaita"' Error)
 ```
 
 ### Install and configure chromium browser
 ```
-# yum install -y chromium
+yum install -y chromium
 
 vi /usr/share/applications/chromium-browser.desktop en vi ~/Desktop/chromium-browser.desktop
 Exec=chromium --password-store=basic %U
@@ -41,7 +41,7 @@ gpgkey=file:///etc/pki/rpm-gpg/RPM-GPG-KEY-EPEL-7
 exclude=check-mk-agent
 ```
 
-### Deny update of CentOS release tot Centos 7.7
+### Deny update of CentOS release to Centos 7.7 and later
 
 Add exclude in /etc/yum.repos.d/CentOS-Base.repo as seen bellow:  
 ```
@@ -67,24 +67,24 @@ Configuration:
 
 ### Disable shell extention Window-list
 ```
-#  mv /usr/share/gnome-shell/extensions/window-list@gnome-shell-extensions.gcampax.github.com/ /root/
+mv /usr/share/gnome-shell/extensions/window-list@gnome-shell-extensions.gcampax.github.com/ /root/
 ```
 ### Configure ntpd
 configure ntp servers in /etc/ntp.conf
 
 ### Configure services
 ```
- # systemctl stop firewalld; systemctl disable firewalld
- # systemctl stop mdmonitor; systemctl disable mdmonitor
- # systemctl stop smart; systemctl disable smart
- # systemctl enable xinetd; systemctl start xinetd
- # systemctl enable ntpd; systemctl start ntpd
- # systemctl stop bluetooth; systemctl disable bluetooth
- # systemctl stop chronyd; systemctl disable chronyd
- # systemctl stop libvirtd.service; systemctl disable libvirtd.service
- # systemctl stop bolt; systemctl disable bolt
- # systemctl stop ModemManager; systemctl disable ModemManager
- # systemctl stop wpa_supplicant; systemctl disable wpa_supplicant
+systemctl stop firewalld; systemctl disable firewalld
+systemctl stop mdmonitor; systemctl disable mdmonitor
+systemctl stop smart; systemctl disable smart
+systemctl enable xinetd; systemctl start xinetd
+systemctl enable ntpd; systemctl start ntpd
+systemctl stop bluetooth; systemctl disable bluetooth
+systemctl stop chronyd; systemctl disable chronyd
+systemctl stop libvirtd.service; systemctl disable libvirtd.service
+systemctl stop bolt; systemctl disable bolt
+systemctl stop ModemManager; systemctl disable ModemManager
+systemctl stop wpa_supplicant; systemctl disable wpa_supplicant
 ```
 
 ### Enable VI syntax Highlighting (install VIM when needed)
@@ -110,14 +110,16 @@ configure ntp servers in /etc/ntp.conf
 ### Configure SAN share
   - Create mountpoint & add mountpoint to /etc/stab
 ```  
-    # mkdir /mnt/san
+mkdir /mnt/san
+
+add to /etc/fstab
     //10.64.72.15/SAN01 /mnt/san cifs user=xxxx,pass=xxxx,noserverino,nounix,ro,sec=ntlm 0 0  (Centos 7.5)
     //10.64.72.15/SAN01 /mnt/san cifs user=xxxx,pass=xxxx,noserverino,nounix,rsize=61440,ro,sec=ntlm,vers=1.0 0 0  (Centos 7.6)
 ```
   - Make it mount at boot time:
 ``` 
-    # chmod +x /etc/rc.d/rc.local  
-    # echo "sleep 15; mount /mnt/san" >> /etc/rc.local  
+chmod +x /etc/rc.d/rc.local  
+echo "sleep 15; mount /mnt/san" >> /etc/rc.local  
 ```
 
 ### Add program directory & copy software   
@@ -154,25 +156,27 @@ configure ntp servers in /etc/ntp.conf
 
 ### Optimze gnome settings
 ```
- # gsettings set org.gnome.nm-applet disable-wifi-create true
- # gsettings set org.gnome.login-screen allowed-failures 100
- # gsettings set org.gnome.nautilus.icon-view default-zoom-level standard
- # gsettings set org.gnome.online-accounts whitelisted-providers []
- # gsettings set org.gnome.desktop.lockdown disable-lock-screen true
- # gsettings set org.gnome.desktop.sound event-sounds false
- # gsettings set org.gnome.desktop.input-sources xkb-options ['numpad:microsoft', 'caps:shiftlock']
- # gsettings set org.gnome.desktop.session idle-delay 0
- later additions
- # gsettings set org.gnome.settings-daemon.plugins.color night-light-enabled false
- # gsettings set org.gnome.settings-daemon.plugins.power idle-dim false
- # gsettings set org.gnome.settings-daemon.plugins.power ambient-enabled false
- # gsettings set org.gnome.desktop.screensaver idle-activation-enabled false
+gsettings set org.gnome.nm-applet disable-wifi-create true
+gsettings set org.gnome.login-screen allowed-failures 100
+gsettings set org.gnome.nautilus.icon-view default-zoom-level standard
+gsettings set org.gnome.online-accounts whitelisted-providers []
+gsettings set org.gnome.desktop.lockdown disable-lock-screen true
+gsettings set org.gnome.desktop.sound event-sounds false
+gsettings set org.gnome.desktop.input-sources xkb-options ['numpad:microsoft', 'caps:shiftlock']
+gsettings set org.gnome.desktop.session idle-delay 0
+  later additions
+gsettings set org.gnome.settings-daemon.plugins.color night-light-enabled false
+gsettings set org.gnome.settings-daemon.plugins.power idle-dim false
+gsettings set org.gnome.settings-daemon.plugins.power ambient-enabled false
+gsettings set org.gnome.desktop.screensaver idle-activation-enabled false
+gsettings set org.gnome.settings-daemon.plugins.power sleep-inactive-ac-type 'nothing'
+gsettings set org.gnome.settings-daemon.plugins.power sleep-inactive-battery-type 'nothing'
 ```
 
 ### Modify logon session list
 ```
-# mv /usr/share/xsessions/gnome-custom-session.desktop /root/
-# mv /usr/share/xsessions/gnome.desktop /root/
+mv /usr/share/xsessions/gnome-custom-session.desktop /root/
+mv /usr/share/xsessions/gnome.desktop /root/
 ```
 
 ### Disable network changes by user
@@ -193,8 +197,8 @@ configure ntp servers in /etc/ntp.conf
 This error shows itself by 10 to 15% cpu for polkitd and many kernel process creations  
 Below two possible solutions, gsettings is the prefered one.
 ```
- # mv /etc/xdg/autostart/org.gnome.SettingsDaemon.Account.desktop /root/;systemctl restart polkit
- # gsettings set org.gnome.settings-daemon.plugins.account notify-period 0 (in the desktop as user wesp & root)
+mv /etc/xdg/autostart/org.gnome.SettingsDaemon.Account.desktop /root/;systemctl restart polkit
+gsettings set org.gnome.settings-daemon.plugins.account notify-period 0 (in the desktop as user wesp & root)
 ```
 
 ### Document tools
@@ -213,8 +217,8 @@ gsettings set org.gnome.desktop.peripherals.keyboard repeat true
 
 ### Disable ctrl+alt+del
 ```
-# systemctl mask ctrl-alt-del.target
-# systemctl daemon-reload
+systemctl mask ctrl-alt-del.target
+systemctl daemon-reload
 ```
 
 ### Opitmize open file limit
@@ -228,14 +232,14 @@ edit /etc/security/limits.conf and add:
 
 ### Optimize Xorg for preventing memory issue & disable DPMS
 ```
-# systemctl stop gdm
-# Xorg -configure
-# mv /root/xorg.conf.new /etc/X11/xorg.conf
+systemctl stop gdm
+Xorg -configure
+mv /root/xorg.conf.new /etc/X11/xorg.conf
 
 add the following in section Monitor:
 	Option "DPMS" "false"
 
-# systemclt start gdm
+systemclt start gdm
 ```
 
 ### Disable oom-killer
