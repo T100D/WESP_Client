@@ -166,6 +166,7 @@ configure ntp servers in /etc/ntp.conf
  # gsettings set org.gnome.settings-daemon.plugins.color night-light-enabled false
  # gsettings set org.gnome.settings-daemon.plugins.power idle-dim false
  # gsettings set org.gnome.settings-daemon.plugins.power ambient-enabled false
+ # gsettings set org.gnome.desktop.screensaver idle-activation-enabled false
 ```
 
 ### Modify logon session list
