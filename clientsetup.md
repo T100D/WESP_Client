@@ -195,20 +195,17 @@ mv /usr/share/xsessions/gnome.desktop /root/
 
 ### Apply bugfix for polkitd error
 This error shows itself by 10 to 15% cpu for polkitd and many kernel process creations  
-Below two possible solutions, gsettings is the prefered one.
 ```
-mv /etc/xdg/autostart/org.gnome.SettingsDaemon.Account.desktop /root/;systemctl restart polkit
 gsettings set org.gnome.settings-daemon.plugins.account notify-period 0 (in the desktop as user wesp & root)
 ```
 
 ### Document tools
-
  - gnome-tweak-tool
  - alacarte
  - dconf-editor
 
 ### keyboard repeat error
-
+Posssibly soved by -repeat option in x11vnc
 Testing code if it fails  
 ```
 gsettings get org.gnome.desktop.peripherals.keyboard repeat  
@@ -280,5 +277,3 @@ Add the following to the start command in: /usr/local/wesp/wesp3/wesp_client/sta
 ```
 -javaagent:/usr/local/wesp/wesp3/jolokia/jolokia-jvm-1.6.2-agent.jar=port=8080
 ```
-
-
