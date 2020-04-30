@@ -87,6 +87,7 @@ systemctl stop ModemManager; systemctl disable ModemManager
 systemctl stop wpa_supplicant; systemctl disable wpa_supplicant
 systemctl disable qemu-guest-agent.service
 systemctl disable mdcheck_continue.service
+systemctl disable ipsec; systemctl mask ipsec
 ```
 
 ### Enable VI syntax Highlighting (install VIM when needed)
