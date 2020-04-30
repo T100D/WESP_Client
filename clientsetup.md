@@ -85,6 +85,8 @@ systemctl stop libvirtd.service; systemctl disable libvirtd.service
 systemctl stop bolt; systemctl disable bolt
 systemctl stop ModemManager; systemctl disable ModemManager
 systemctl stop wpa_supplicant; systemctl disable wpa_supplicant
+systemctl disable qemu-guest-agent.service
+systemctl disable mdcheck_continue.service
 ```
 
 ### Enable VI syntax Highlighting (install VIM when needed)
