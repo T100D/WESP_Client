@@ -236,8 +236,11 @@ systemctl stop gdm
 Xorg -configure
 mv /root/xorg.conf.new /etc/X11/xorg.conf
 
-add the following in section Monitor:
+add the following in section "Monitor":
 	Option "DPMS" "false"
+	
+add the following in Section "Screen":
+	DefaultDepth 16
 
 systemclt start gdm
 ```
