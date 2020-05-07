@@ -41,21 +41,7 @@ gpgkey=file:///etc/pki/rpm-gpg/RPM-GPG-KEY-EPEL-7
 exclude=check-mk-agent
 ```
 
-### Deny update of CentOS release to Centos 7.7 and later
-
-Add exclude in /etc/yum.repos.d/CentOS-Base.repo as seen bellow:  
-```
-[base]
-name=CentOS-$releasever - Base
-mirrorlist=http://mirrorlist.centos.org/?release=$releasever&arch=$basearch&repo=os&infra=$infra
-#baseurl=http://mirror.centos.org/centos/$releasever/os/$basearch/
-gpgcheck=1
-gpgkey=file:///etc/pki/rpm-gpg/RPM-GPG-KEY-CentOS-7
-enabled=1
-exclude=centos-release
-```
-
-### Install Shell Extention
+### Install Shell Extention (declined from centos 7.7)
 
 Install shell extention Taskbar (https://extensions.gnome.org/extension/584/taskbar/) version 3.32/57  
 Configuration:
