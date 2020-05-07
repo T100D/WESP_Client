@@ -51,7 +51,7 @@ Configuration:
   - Buttons: Disable Desktopbutton Click
   - Misc: Activities & Applicaion & Hot Corner Menu & Dash: OFF
 
-### Disable shell extention Window-list
+### Disable shell extention Window-list (declined from centos 7.7)
 ```
 mv /usr/share/gnome-shell/extensions/window-list@gnome-shell-extensions.gcampax.github.com/ /root/
 ```
