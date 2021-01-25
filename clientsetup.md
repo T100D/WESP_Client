@@ -26,6 +26,14 @@ vi /usr/share/applications/chromium-browser.desktop en vi ~/Desktop/chromium-bro
 Exec=chromium --password-store=basic %U
 ```
 
+### Aditional chromium startup settigs due to malformed presentation
+```
+--disable-gpu -no-xshm
+
+Exec=chromium --password-store=basic -disable-gpu --no-xshm %U
+
+```
+
 ### Deny update of check-mk-agent from epel repo
 
 Add exclude in /etc/yum.repos.d/epel.repo as seen bellow:
