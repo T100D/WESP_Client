@@ -31,7 +31,12 @@ Exec=chromium --password-store=basic %U
 --disable-gpu -no-xshm
 
 Exec=chromium --password-store=basic -disable-gpu --no-xshm %U
+```
 
+### Install Google-Chrome
+```
+wget https://dl.google.com/linux/direct/google-chrome-stable_current_x86_64.rpm
+yum localinstall google-chrome-stable_current_x86_64.rpm
 ```
 
 ### Deny update of check-mk-agent from epel repo
