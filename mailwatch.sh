@@ -9,7 +9,7 @@
 # 12-07-2019
 # versie 0.2 including multiple file handling
 #
-# 15-07-2019
+# 16-07-2019
 # Versie 0.3 include handling spaces in flienames
 #
 
