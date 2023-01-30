@@ -190,7 +190,7 @@ mv /usr/share/xsessions/gnome.desktop /root/
     - Unzip file & ./install.sh & follow procedure, type = socket ip 10.64.60.84:9100
 
 ### Prohibit Shutdown by user
-  - Add 55-inhibit-shutdown.rules
+  - Add 55-inhibit-shutdown.rules >> /etc/polkit-1/rules.d/
 
 ### Complete hostsfile
   - Add workstations to /ets/hosts
