@@ -282,3 +282,13 @@ Add the following to the start command in: /usr/local/wesp/wesp3/wesp_client/sta
 ```
 -javaagent:/usr/local/wesp/wesp3/jolokia/jolokia-jvm-1.6.2-agent.jar=port=8080
 ```
+
+### Optimize disk speed
+Make modifications to /etc/fstab for better diskspeed of the system, the added parameters are noatime and nobarrier.
+
+```
+/dev/mapper/centos_wspcvl--wstndc-root /                       xfs     defaults,noatime,nobarrier        0 0
+UUID=b3fd6416-68d5-4812-b099-ca0ba280af03 /boot                   xfs     defaults        0 0
+/dev/mapper/centos_wspcvl--wstndc-home /home                   xfs     defaults,noatime,nobarrier        0 0
+/dev/mapper/centos_wspcvl--wstndc-swap swap                    swap    defaults,noatime,nobarrier        0 0
+```
